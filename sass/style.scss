@@ -43,3 +43,10 @@
 // Utilities
 @import "../bootstrap-scss/utilities/api";
 // scss-docs-end import-stack
+
+footer {
+	margin-top: 3em;
+	background-color: $primary;
+	padding: 2em 0em 2em 0em;
+	text-align: center;
+}
