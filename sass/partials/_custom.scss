@@ -6,3 +6,14 @@ $primary: #3b7302 !important;
 // $danger:
 // $light: #F2F2F2;
 // $dark: #012606;
+
+footer {
+	margin-top: 3em;
+	background-color: $primary;
+	padding: 2em 0em 2em 0em;
+	text-align: center;
+}
+
+.wrapper {
+	margin: 4em 0;
+}
