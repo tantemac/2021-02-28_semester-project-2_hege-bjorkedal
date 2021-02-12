@@ -1,11 +1,12 @@
+import displayMessage from "./components/displayMessage.js";
+import { saveToken, saveUser } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
+
 
 const form = document.querySelector("#loginForm");
 const username = document.querySelector("#inputUsername");
-const password = document.querySelector("#inputPassword");
+const password = document.querySelector("#InputPassword");
 const message = document.querySelector(".messageContainer");
-
-// createMenu();
 
 form.addEventListener("submit", submitForm);
 
@@ -17,34 +18,35 @@ function submitForm(event) {
     const usernameValue = username.value.trim();
     const passwordValue = password.value.trim();
 
-    if (usernameValue.length === 0 || passwordValue.length === 0) {
-        return displayMessage("warning", "Invalid values", ".message-container");
+    if(usernameValue.length === 0 || passwordValue.length === 0) {
+        return displayMessage ("warning", "Invalid values", ".messageContainer");
     }
 
     doLogin(usernameValue, passwordValue);
+
 }
 
 async function doLogin(username, password) {
+    
     const url = baseUrl + "auth/local";
 
-    const data = JSON.stringify({ identifier: username, password: password });
+    const data = JSON.stringify({ identifier: username, password: password});
 
     const options = {
         method: "POST",
         body: data,
         headers: {
-            "Content-Type": "application/json",
-        },
+            "Content-Type": "application/json"
+        }
     };
 
     try {
         const response = await fetch(url, options);
         const json = await response.json();
-
         console.log(json);
 
-        if (json.user) {
-            // displayMessage("success", "Successfully logged in", ".message-container");
+        if(json.user) {
+            // displayMessage("success", "You are now logged in", ".messageContainer");
 
             saveToken(json.jwt);
             saveUser(json.user);
@@ -52,10 +54,12 @@ async function doLogin(username, password) {
             location.href = "index.html";
         }
 
-        if (json.error) {
-            displayMessage("warning", "Invalid login details", ".message-container");
+        if(json.error) {
+            displayMessage("warning", "Invalid login details", ".messageContainer");
         }
-    } catch (error) {
+
+    } catch(error) {
         console.log(error);
     }
+
 }
