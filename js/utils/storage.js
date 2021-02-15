@@ -13,6 +13,16 @@ export function saveUser(user) {
     SaveToStorage(userKey, user);
 }
 
+export function getUserName() {
+    const user = getFromStorage(userKey);
+
+    if (user) {
+        return user.username;
+    }
+
+    return null;
+}
+
 function SaveToStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }

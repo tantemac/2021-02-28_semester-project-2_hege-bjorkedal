@@ -1,8 +1,12 @@
 import { baseUrl } from "./settings/api.js";
+import displayMessage from "./components/displayMessage.js";
+import createMenu from "./components/createMenu.js";
 // import { renderPlants} from "./utils/renderPlants.js";
 
 
 const plantUrl = baseUrl + "plants";
+
+createMenu();
 
 const getProductsFromAPI = async () => {
     try {

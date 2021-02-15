@@ -1,3 +1,4 @@
+import createMenu from "./components/createMenu.js";
 import displayMessage from "./components/displayMessage.js";
 import { saveToken, saveUser } from "./utils/storage.js";
 import { baseUrl } from "./settings/api.js";
@@ -8,9 +9,12 @@ const username = document.querySelector("#inputUsername");
 const password = document.querySelector("#InputPassword");
 const message = document.querySelector(".messageContainer");
 
+createMenu();
+
 form.addEventListener("submit", submitForm);
 
 function submitForm(event) {
+
     event.preventDefault();
 
     message.innerHTML = "";
@@ -46,7 +50,6 @@ async function doLogin(username, password) {
         console.log(json);
 
         if(json.user) {
-            // displayMessage("success", "You are now logged in", ".messageContainer");
 
             saveToken(json.jwt);
             saveUser(json.user);
