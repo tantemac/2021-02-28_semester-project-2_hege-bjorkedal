@@ -24,18 +24,23 @@ function submitForm(event) {
     const descriptionValue = description.value.trim();
     const imageValue = image.value.trim();
 
-    console.log("priceValue", priceValue);
-
     if(nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageValue.length === 0) {
         displayMessage("warning", "Please provide proper product details before adding product", ".messageContainer");
     }
 
     addProduct(nameValue, priceValue, descriptionValue, imageValue);
 
+    console.log("nameValue", nameValue);
+    console.log("priceValue", priceValue);
+    console.log("descriptionValue", descriptionValue);
+    console.log("imageValue", imageValue);
+
 }
 
 async function addProduct(name, price, description, image) {
     const url = baseUrl + "plants";
+
+    console.log("url",url);
 
     const data = JSON.stringify({name: name, price: price, description: description, image: image });
 
