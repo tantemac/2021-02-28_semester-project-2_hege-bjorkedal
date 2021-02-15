@@ -1,12 +1,14 @@
 import { baseUrl } from "./settings/api.js";
 import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
-// import { renderPlants} from "./utils/renderPlants.js";
+import { renderPlants } from "./utils/renderPlants.js";
+import { renderBanner } from "./utils/renderBanner.js";
 
 
 const plantUrl = baseUrl + "plants";
 
 createMenu();
+renderBanner();
 
 const getProductsFromAPI = async () => {
     try {
@@ -17,7 +19,7 @@ const getProductsFromAPI = async () => {
 
         const plants = json;
 
-        // renderArticles(plants);
+        renderPlants(plants);
     } catch (error) {
         console.log(error);
         displayMessage("error", error, ".apiContainer")
