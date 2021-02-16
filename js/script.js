@@ -2,13 +2,14 @@
 // import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
 // import { renderPlants } from "./utils/renderPlants.js";
-import { renderBanner } from "./utils/renderBanner.js";
+import { initBanner } from "./utils/renderBanner.js";
 
 
 // const plantUrl = baseUrl + "plants";
 
 createMenu();
-renderBanner();
+initBanner();
+
 
 // const getProductsFromAPI = async () => {
 //     try {

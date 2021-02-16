@@ -34,7 +34,7 @@ export function renderPlants(json) {
                     </div>
                     <div class="card-body">
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary" type="button">Buy</button>
+                            <button class="btn btn-primary addToCart" type="button" data-id="${plants.id}" data-name="${plants.name}">Buy</button>
                         </div>
                     </div>
                 </div>
@@ -43,3 +43,5 @@ export function renderPlants(json) {
 });
 
 }
+
+

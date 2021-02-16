@@ -1,5 +1,5 @@
 import { baseUrl } from "../settings/api.js";
-// import displayMessage from "../components/displayMessage.js";
+import displayMessage from "../components/displayMessage.js";
 
 const bannerContainer = document.querySelector(".bannerContainer");
 
@@ -12,18 +12,14 @@ const getBannerFromAPI = async () => {
 
         console.log(json);
 
-        const banner = json;
-
-        renderBanner(banner);
+        renderBanner(json);
     } catch (error) {
         console.log(error);
-        // displayMessage("error", error, ".heroBanner")
+        displayMessage("error", error, ".heroBanner")
     }
 };
 
-getBannerFromAPI();
-
-export function renderBanner(json) {
+function renderBanner(json) {
 
     bannerContainer.innerHTML ="";
 
@@ -33,7 +29,11 @@ export function renderBanner(json) {
             bannerContainer.innerHTML += `<img src="${banner.heroBanner}" class="img-fluid">`
         } else {
             console.log(error);
-            // displayMessage("error", error, ".heroBanner");
+            displayMessage("error", error, ".heroBanner");
         }
     });
 };
+
+export function initBanner() {
+getBannerFromAPI();
+}
