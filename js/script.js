@@ -1,29 +1,29 @@
-import { baseUrl } from "./settings/api.js";
-import displayMessage from "./components/displayMessage.js";
+// import { baseUrl } from "./settings/api.js";
+// import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
-import { renderPlants } from "./utils/renderPlants.js";
+// import { renderPlants } from "./utils/renderPlants.js";
 import { renderBanner } from "./utils/renderBanner.js";
 
 
-const plantUrl = baseUrl + "plants";
+// const plantUrl = baseUrl + "plants";
 
 createMenu();
 renderBanner();
 
-const getProductsFromAPI = async () => {
-    try {
-        const response = await fetch(plantUrl);
-        const json = await response.json();
+// const getProductsFromAPI = async () => {
+//     try {
+//         const response = await fetch(plantUrl);
+//         const json = await response.json();
 
-        console.log(json);
+//         console.log(json);
 
-        const plants = json;
+//         const plants = json;
 
-        renderPlants(plants);
-    } catch (error) {
-        console.log(error);
-        displayMessage("error", error, ".apiContainer")
-    }
-};
+//         renderPlants(plants);
+//     } catch (error) {
+//         console.log(error);
+//         displayMessage("error", error, ".apiContainer")
+//     }
+// };
 
-getProductsFromAPI();
+// getProductsFromAPI();

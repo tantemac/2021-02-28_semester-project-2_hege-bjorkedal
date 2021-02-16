@@ -11296,10 +11296,39 @@ fieldset:disabled .btn {
   }
 }
 
-footer {
+.strangeFooter {
   margin-top: 3em;
-  background-color: #0d6efd;
+  background-color: #3b7302 !important;
   padding: 2em 0em 2em 0em;
   text-align: center;
+}
+
+.wrapper {
+  margin: 4em 0;
+}
+
+.message {
+  width: 100%;
+  padding: 1rem;
+  border: 1px solid grey;
+  color: grey;
+}
+
+.message.error {
+  border-color: red;
+  color: white;
+  background: red;
+}
+
+.message.warning {
+  border-color: orange;
+  color: white;
+  background: orange;
+}
+
+.message.success {
+  border-color: green;
+  color: white;
+  background: green;
 }
 /*# sourceMappingURL=style.css.map */

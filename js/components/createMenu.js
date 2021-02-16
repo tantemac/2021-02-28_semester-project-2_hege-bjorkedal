@@ -17,11 +17,11 @@ export default function createMenu() {
                         <a class="nav-link ${pathname === "/admin.html" ? "active" : ""}" href="admin.html">Admin</a>
                     </li>
                     <li class="nav-item">
-                        <button class="nav-link" id="logout">Logout ${username}</button>
+                        <button class="btn btn-primary" id="logout">Logout</button>
                     </li>`;
     }
 
-    console.log(username);
+    // console.log(username);
 
     const container = document.querySelector(".menuContainer");
 
@@ -51,5 +51,5 @@ export default function createMenu() {
                             </div>`;
 
     logoutButton();
-    
+
 }
