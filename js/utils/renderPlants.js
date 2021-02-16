@@ -13,18 +13,34 @@ export function renderPlants(json) {
     if (username) {
         plantContainer.innerHTML += `<div class="row">
             <div class="col-sm">
-                <img src="${plants.image}">
-                <h4>${plants.name}</h4>
-                <p>Price: ${plants.price}</p>
-                <a href="edit.html?id=${plants.id}"><i class="far fa-edit"></i></a>
+                <div class="card" style="width: 18rem;">
+                    <img src="${plants.image}" class="card-img-top" alt="${plants.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${plants.name}</h5>
+                        <p class="card-text">$ ${plants.price}</p>
+                    </div>
+                    <div class="card-body">
+                        <a href="edit.html?id=${plants.id}" class="btn btn-primary">Edit</a>
+                        <a href="#" class="btn btn-primary">Delete</a>
+                    </div>
+                </div>
             </div>
         </div>`
     } else {
         `<div class="row">
             <div class="col-sm">
-                <img src="${plants.image}>
-                <h4>${plants.name}</h4>
-                <p>Price: ${plants.price}</p>
+                <div class="card" style="width: 18rem;">
+                    <img src="${plants.image}" class="card-img-top" alt="${plants.name}">
+                    <div class="card-body">
+                        <h5 class="card-title">${plants.name}</h5>
+                        <p class="card-text">$ ${plants.price}</p>
+                    </div>
+                    <div class="card-body">
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary" type="button">Buy</button>
+                        </div>
+                    </div>
+                </div>
             </div>
         </div>`
     }

@@ -23,6 +23,10 @@ export function getUserName() {
     return null;
 }
 
+export function clearStorage() {
+    localStorage.clear();
+}
+
 function SaveToStorage(key, value) {
     localStorage.setItem(key, JSON.stringify(value));
 }
