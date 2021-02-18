@@ -1,36 +1,55 @@
-// import displayMessage from "./components/displayMessage.js";
+import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
-// import { getToken } from "./utils/storage.js";
-// import { baseUrl } from "./settings/api.js";
-import { renderPlants } from "./utils/renderPlants.js";
+// // import { getToken } from "./utils/storage.js";
+// // import { baseUrl } from "./settings/api.js";
+// import { renderPlants } from "./utils/renderPlants.js";
 import { getExistingCart } from "./utils/getCart.js";
 
 createMenu();
-renderPlants();
 
-const addToCartButton = document.querySelectorAll(".addToCart");
+const cart = getExistingCart();
 
-addToCartButton.forEach((button) => {
-    button.addEventListener("click", handleClick);
+const cartContainer = document.querySelector(".cartContainer");
+
+if(cart.length === 0) {
+    cartContainer.innerHTML = "You have not added any products to your cart yet.";
+}
+
+cart.forEach((cartProduct) => {
+
+    cartContainer.innerHTML += `<div class="row row-cols-3 cartTitles">
+                                    <div class="col">
+                                        
+                                    </div>
+                                    <div class="col">
+                                        <h6>Product</h6>
+                                    </div>
+                                    <div class="col">
+                                        <h6>Price</h6>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-3 cartProduct">
+                                    <div class="col">
+                                        <img src="${cartProduct.image}" class="img-thumbnail" alt="${cartProduct.name}">
+                                    </div>
+                                    <div class="col align-self-center">
+                                        <a href="details.html?id=${cartProduct.id}">
+                                            <h5>${cartProduct.name}</h5>
+                                            </a>
+                                    </div>
+                                    <div class="col align-self-center">
+                                        <h5>$ ${cartProduct.price}</h5>
+                                    </div>
+                                </div>
+                                <div class="row row-cols-3 cartTotal">
+                                <div class="col">
+                                
+                                </div>
+                                <div class="col">
+                                    <h4>Total price:</h4>
+                                </div>
+                                <div class="col">
+                                    <h4>$ Total price</h4>
+                                </div>
+                            </div>`
 });
-
-function handleClick() {
-    // console.log(event);
-
-    const id = this.dataset.id;
-    const name = this.dataset.name;
-    
-    // console.log("name", name);
-
-    const currentCart = getExistingCart();
-
-    const plantProduct = { id: id, name: name };
-    currentCart.push(plantProduct);
-
-    saveCart (currentCart);
-}
-
-function saveCart(cart) {
-    localStorage.setItem("cartProducts", JSON.stringify(cart));
-
-}

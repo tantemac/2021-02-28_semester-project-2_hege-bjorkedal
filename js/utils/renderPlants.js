@@ -1,4 +1,5 @@
 import { getUserName } from "../utils/storage.js";
+import { getExistingCart } from "../utils/getCart.js";
 
 const plantContainer = document.querySelector(".apiContainer");
 
@@ -34,13 +35,43 @@ export function renderPlants(json) {
                     </div>
                     <div class="card-body">
                         <div class="d-grid gap-2">
-                            <button class="btn btn-primary addToCart" type="button" data-id="${plants.id}" data-name="${plants.name}">Buy</button>
+                            <a href="details.html?id=${plants.id}"<button class="btn btn-primary showDetails" type="button">Details</button></a>
+                            <button class="btn btn-primary addToCart" type="button" data-id="${plants.id}" data-name="${plants.name}" data-image="${plants.image}" data-price="${plants.price}">Quick buy</button>
                         </div>
                     </div>
                 </div>
             </div>`
     }
 });
+
+const addToCartButton = document.querySelectorAll(".addToCart");
+
+addToCartButton.forEach((button) => {
+    button.addEventListener("click", handleClick);
+});
+
+function handleClick() {
+    // console.log(event);
+
+    const id = this.dataset.id;
+    const name = this.dataset.name;
+    const image = this.dataset.image;
+    const price = this.dataset.price;
+    
+    // console.log("name", name);
+
+    const currentCart = getExistingCart();
+
+    const plantProduct = { id: id, name: name, image: image, price: price };
+    currentCart.push(plantProduct);
+
+    saveCart (currentCart);
+}
+
+function saveCart(cart) {
+    localStorage.setItem("cartProducts", JSON.stringify(cart));
+
+}
 
 }
 

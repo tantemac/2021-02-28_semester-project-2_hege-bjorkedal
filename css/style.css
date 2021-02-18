@@ -11296,7 +11296,7 @@ fieldset:disabled .btn {
   }
 }
 
-.strangeFooter {
+footer {
   margin-top: 3em;
   background-color: #3b7302 !important;
   padding: 2em 0em 2em 0em;
@@ -11305,6 +11305,23 @@ fieldset:disabled .btn {
 
 .wrapper {
   margin: 4em 0;
+}
+
+.img-thumbnail {
+  width: 100px;
+}
+
+.cartTitles {
+  margin-top: 2em;
+  border-bottom: 0.5px solid grey;
+}
+
+.cartProduct {
+  margin-top: 2em;
+}
+
+.cartTotal {
+  margin-top: 2em;
 }
 
 .message {
