@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<script
+			src="https://kit.fontawesome.com/629d80b15b.js"
+			crossorigin="anonymous"
+		></script>
+		<link href="css/style.css" rel="stylesheet" />
+		<title>Green Life | Edit product</title>
+	</head>
+	<body>
+		<nav class="navbar sticky-top navbar-expand-lg navbar-light bg-light">
+			<div class="container-fluid">
+				<a class="navbar-brand" href="index.html">
+					<img
+						src="images/logo.png"
+						alt="Green Life Logo"
+						height="50"
+						class="d-inline-block align-top"
+					/>
+					Green Life
+				</a>
+				<div class="menuContainer"></div>
+			</div>
+		</nav>
+		<div class="container-lg">
+			<h1>Edit product</h1>
+			<div class="messageContainer"></div>
+			<form>
+				<div class="mb-3">
+					<label for="name" class="form-label">Name</label>
+					<input
+						type="text"
+						class="form-control"
+						id="name"
+						placeholder="Product name"
+					/>
+				</div>
+				<div class="mb-3">
+					<label for="price" class="form-label">Price</label>
+					<input
+						type="number"
+						class="form-control"
+						id="price"
+						placeholder="Product price in numbers"
+					/>
+				</div>
+				<div class="mb-3">
+					<label for="description" class="form-label">Description</label>
+					<textarea
+						class="form-control"
+						id="description"
+						placeholder="Product description"
+					></textarea>
+				</div>
+				<div class="mb-3">
+					<label for="image" class="form-label">Image</label>
+					<input
+						type="text"
+						class="form-control"
+						id="image"
+						placeholder="Product image URL"
+					/>
+				</div>
+				<button type="submit" class="btn btn-primary">Add product</button>
+			</form>
+		</div>
+
+		<footer class="fixed-bottom">
+			<div class="container-fluid">
+				<div class="row">
+					<div class="col-sm">
+						<h6>Green Life</h6>
+						<!-- <img src="images/logo.png" alt="Green Life Logo" height="50" /> -->
+					</div>
+					<div class="col-sm">
+						<h6>post@greenlife.com</h6>
+					</div>
+					<div class="col-sm">
+						<h6>Follow us on</h6>
+					</div>
+				</div>
+			</div>
+		</footer>
+
+		<script type="module" src="js/edit.js"></script>
+	</body>
+</html>

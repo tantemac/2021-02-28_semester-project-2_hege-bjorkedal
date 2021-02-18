@@ -1,8 +1,4 @@
-import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
-// // import { getToken } from "./utils/storage.js";
-// // import { baseUrl } from "./settings/api.js";
-// import { renderPlants } from "./utils/renderPlants.js";
 import { getExistingCart } from "./utils/getCart.js";
 
 createMenu();
