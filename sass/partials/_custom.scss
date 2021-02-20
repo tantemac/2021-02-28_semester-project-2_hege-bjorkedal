@@ -5,13 +5,37 @@ $primary: #3b7302 !important;
 // $warning:
 // $danger:
 $light: #f2f2f2;
-// $dark: #012606;
+$dark: #012606;
 
 footer {
 	background-color: $primary;
 	padding: 2em 0em 2em 0em;
 	text-align: center;
 }
+
+.logOutBtn {
+	margin-left: 20px;
+}
+
+.adminBtn {
+	background-color: $dark;
+	color: $light;
+	width: 100px;
+	height: 100px;
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+}
+
+// .breadcrumbsContainer {
+// 	margin-top: 20px;
+// 	margin-bottom: 10px;
+// }
+
+// .breadcrumbsLink {
+// 	text-decoration: none;
+// 	color: $dark;
+// }
 
 .wrapper {
 	margin: 4em 0;

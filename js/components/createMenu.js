@@ -17,7 +17,7 @@ export default function createMenu() {
                         <a class="nav-link ${pathname === "/admin.html" ? "active" : ""}" href="admin.html">Admin</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-primary" id="logout">Logout</button>
+                        <button class="logOutBtn btn btn-primary" id="logout">Logout</button>
                     </li>`;
     }
 
