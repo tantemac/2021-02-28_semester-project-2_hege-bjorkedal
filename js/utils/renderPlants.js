@@ -12,7 +12,8 @@ export function renderPlants(json) {
     json.forEach(function (plants) {
 
     if (username) {
-        plantContainer.innerHTML += `<div class="col-sm">
+        plantContainer.innerHTML += `
+            <div class="col-sm">
                 <div class="card" style="width: 18rem;">
                     <img src="${plants.image}" class="card-img-top" alt="${plants.name}">
                     <div class="card-body">
@@ -21,7 +22,6 @@ export function renderPlants(json) {
                     </div>
                     <div class="card-body">
                         <a href="edit.html?id=${plants.id}" class="btn btn-primary">Edit</a>
-                        <a href="#" class="btn btn-primary">Delete</a>
                     </div>
                 </div>
             </div>`

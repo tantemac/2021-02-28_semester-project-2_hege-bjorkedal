@@ -11337,6 +11337,15 @@ footer {
   margin-top: 2em;
 }
 
+.delete {
+  background-color: darkred;
+  border-color: darkred;
+}
+
+.delete:hover {
+  background-color: black;
+}
+
 .message {
   width: 100%;
   padding: 1rem;

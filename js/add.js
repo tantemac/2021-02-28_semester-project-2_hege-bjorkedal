@@ -25,7 +25,7 @@ function submitForm(event) {
     const imageValue = image.value.trim();
 
     if(nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageValue.length === 0) {
-        displayMessage("warning", "Please provide proper product details before adding product", ".messageContainer");
+        return displayMessage("warning", "Please provide proper product details before adding product", ".messageContainer");
     }
 
     addProduct(nameValue, priceValue, descriptionValue, imageValue);
@@ -60,6 +60,14 @@ async function addProduct(name, price, description, image) {
         const json = await response.json();
 
         console.log(json)
+
+        if(json.created_at) {
+            displayMessage("success", "Product added", ".messageContainer");
+        }
+
+        if(json.error) {
+            displayMessage("error", json.message, ".messageContainer");
+        }
 
     } catch(error) {
         console.log(error)
