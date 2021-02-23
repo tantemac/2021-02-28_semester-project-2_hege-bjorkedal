@@ -2,6 +2,7 @@ import { baseUrl } from "./settings/api.js";
 import displayMessage from "./components/displayMessage.js";
 import createMenu from "./components/createMenu.js";
 import { renderPlants } from "./utils/renderPlants.js";
+import { searchProduct } from "./utils/searchProduct.js";
 
 
 const plantUrl = baseUrl + "plants";
@@ -16,9 +17,11 @@ const getProductsFromAPI = async () => {
 
         console.log(json);
 
-        const plants = json;
+        const plantsToRender = json;
 
-        renderPlants(plants);
+        renderPlants(plantsToRender);
+        searchProduct(plantsToRender);
+        
     } catch (error) {
         console.log(error);
         displayMessage("error", error, ".apiContainer")

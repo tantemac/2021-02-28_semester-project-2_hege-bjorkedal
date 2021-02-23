@@ -11346,6 +11346,16 @@ footer {
   background-color: black;
 }
 
+.searchContainer {
+  margin: 1em 0;
+}
+
+.searchContainer input {
+  border: 1px solid #012606;
+  border-radius: 5px;
+  padding: 10px;
+}
+
 .message {
   width: 100%;
   padding: 1rem;

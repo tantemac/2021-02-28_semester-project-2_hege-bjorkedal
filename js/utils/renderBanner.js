@@ -15,7 +15,7 @@ const getBannerFromAPI = async () => {
         renderBanner(json);
     } catch (error) {
         console.log(error);
-        displayMessage("error", error, ".heroBanner")
+        displayMessage("error", error, ".bannerContainer")
     }
 };
 
@@ -26,10 +26,11 @@ function renderBanner(json) {
     json.forEach(function (banner) {
 
         if (banner) {
+            // bannerContainer.innerHTML += `<div style="background-image: url("${banner.heroBanner}"); background-repeat: no-repeat; width: 100%; height: 100%;"></div>`
             bannerContainer.innerHTML += `<img src="${banner.heroBanner}" class="img-fluid">`
         } else {
             console.log(error);
-            displayMessage("error", error, ".heroBanner");
+            displayMessage("error", error, ".bannerContainer")
         }
     });
 };

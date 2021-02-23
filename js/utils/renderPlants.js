@@ -1,15 +1,14 @@
 import { getUserName } from "../utils/storage.js";
-// import { getExistingCart } from "../utils/getCart.js";
 
 const plantContainer = document.querySelector(".apiContainer");
 
-export function renderPlants(json) {
+export function renderPlants(plantsToRender) {
 
     const username = getUserName();
 
     plantContainer.innerHTML = "";
 
-    json.forEach(function (plants) {
+    plantsToRender.forEach(function (plants) {
 
     if (username) {
         plantContainer.innerHTML += `
@@ -21,7 +20,9 @@ export function renderPlants(json) {
                         <p class="card-text">$ ${plants.price}</p>
                     </div>
                     <div class="card-body">
-                        <a href="edit.html?id=${plants.id}" class="btn btn-primary">Edit</a>
+                        <div class="d-grid gap-2">
+                            <a href="edit.html?id=${plants.id}" class="btn btn-primary">Edit</a>
+                        </div>
                     </div>
                 </div>
             </div>`
@@ -40,37 +41,8 @@ export function renderPlants(json) {
                     </div>
                 </div>
             </div>`
-    }
-});
-
-// const addToCartButton = document.querySelectorAll(".addToCart");
-
-// addToCartButton.forEach((button) => {
-//     button.addEventListener("click", handleClick);
-// });
-
-// function handleClick() {
-//     // console.log(event);
-
-//     const id = this.dataset.id;
-//     const name = this.dataset.name;
-//     const image = this.dataset.image;
-//     const price = this.dataset.price;
-    
-//     // console.log("name", name);
-
-//     const currentCart = getExistingCart();
-
-//     const plantProduct = { id: id, name: name, image: image, price: price };
-//     currentCart.push(plantProduct);
-
-//     saveCart (currentCart);
-// }
-
-// function saveCart(cart) {
-//     localStorage.setItem("cartProducts", JSON.stringify(cart));
-
-// }
+        }
+    });
 
 }
 
