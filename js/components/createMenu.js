@@ -9,7 +9,7 @@ export default function createMenu() {
     const username = getUserName();
 
     let authLink = `<li class="nav-item">
-                        <a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html">Log in</a>
+                        <a class="nav-link ${pathname === "/login.html" ? "active" : ""}" href="login.html"><i class="fas fa-user-circle fa-lg"></i></a>
                     </li>`;
 
     if(username) {
@@ -44,7 +44,7 @@ export default function createMenu() {
                                         <a class="nav-link ${pathname === "/products.html" ? "active" : ""}" href="products.html">Products</a>
                                     </li>
                                     <li class="nav-item">
-                                        <a class="nav-link ${pathname === "/cart.html" ? "active" : ""}" href="cart.html">Cart</a>
+                                        <a class="nav-link ${pathname === "/cart.html" ? "active" : ""}" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
                                     </li>
                                         ${authLink}
                                 </ul>
