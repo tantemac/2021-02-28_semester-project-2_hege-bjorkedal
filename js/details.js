@@ -1,7 +1,7 @@
 import createMenu from "./components/createMenu.js";
 import { baseUrl } from "./settings/api.js";
 import displayMessage from "./components/displayMessage.js";
-import { getExistingCart } from "./utils/getCart.js";
+import addToCart from "./utils/addToCart.js";
 
 createMenu();
 
@@ -51,30 +51,7 @@ const productUrl = baseUrl + "plants/" + id;
 const addToCartButton = document.querySelectorAll(".addToCart");
 
 addToCartButton.forEach((button) => {
-    button.addEventListener("click", handleClick);
+    button.addEventListener("click", addToCart);
 });
-
-function handleClick() {
-    // console.log(event);
-
-    const id = this.dataset.id;
-    const name = this.dataset.name;
-    const image = this.dataset.image;
-    const price = this.dataset.price;
-    
-    // console.log("name", name);
-
-    const currentCart = getExistingCart();
-
-    const plantProduct = { id: id, name: name, image: image, price: price };
-    currentCart.push(plantProduct);
-
-    saveCart (currentCart);
-}
-
-export default function saveCart(cart) {
-    localStorage.setItem("cartProducts", JSON.stringify(cart));
-
-}
 
 })();

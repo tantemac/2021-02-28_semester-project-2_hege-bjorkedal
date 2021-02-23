@@ -2,7 +2,7 @@ export function getExistingCart() {
 
     const cart = localStorage.getItem("cartProducts");
 
-    console.log(cart);
+    // console.log(cart);
 
     if(!cart) {
         return [];
