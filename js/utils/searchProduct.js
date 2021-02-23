@@ -9,7 +9,7 @@ export function searchProduct(plantsToRender) {
         const searchValue = event.target.value.trim().toLowerCase();
 
         const filteredPlants = plantsToRender.filter(function (plant) {
-            if (plant.name.toLowerCase().includes(searchValue) | plant.description.toLowerCase().includes(searchValue)) {
+            if (plant.name.toLowerCase().includes(searchValue) || plant.description.toLowerCase().includes(searchValue)) {
                 return true;
             }
         });

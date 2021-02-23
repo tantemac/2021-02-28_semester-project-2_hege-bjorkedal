@@ -11335,6 +11335,8 @@ footer {
 
 .cartTotal {
   margin-top: 2em;
+  border-top: 0.5px solid grey;
+  padding-top: 1em;
 }
 
 .delete {

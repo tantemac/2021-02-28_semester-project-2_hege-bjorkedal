@@ -1,4 +1,3 @@
-
 export function getExistingCart() {
 
     const cart = localStorage.getItem("cartProducts");

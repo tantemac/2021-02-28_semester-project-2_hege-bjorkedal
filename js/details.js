@@ -72,7 +72,7 @@ function handleClick() {
     saveCart (currentCart);
 }
 
-function saveCart(cart) {
+export default function saveCart(cart) {
     localStorage.setItem("cartProducts", JSON.stringify(cart));
 
 }
