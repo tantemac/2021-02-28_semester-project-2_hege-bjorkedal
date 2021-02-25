@@ -7,6 +7,11 @@
 			src="https://kit.fontawesome.com/629d80b15b.js"
 			crossorigin="anonymous"
 		></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
 		<link href="css/style.css" rel="stylesheet" />
 		<title>Green Life | Edit product</title>
 	</head>
@@ -65,6 +70,30 @@
 					/>
 				</div>
 				<div class="mb-3">
+					<label for="featured" class="form-label">Featured</label>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="checkbox"
+							value=""
+							id="notFeatured"
+							checked
+						/>
+						<label class="form-check-label" for="notFeatured">
+							Not featured
+						</label>
+					</div>
+					<div class="form-check">
+						<input
+							class="form-check-input"
+							type="checkbox"
+							value=""
+							id="featured"
+						/>
+						<label class="form-check-label" for="featured"> Featured </label>
+					</div>
+				</div>
+				<div class="mb-3">
 					<input class="form-control" id="id" type="hidden" />
 				</div>
 				<button id="update" type="submit" class="btn btn-primary">
@@ -75,12 +104,11 @@
 			</form>
 		</div>
 
-		<footer class="fixed-bottom">
+		<footer class="fixedFooter">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm">
 						<h6>Green Life</h6>
-						<!-- <img src="images/logo.png" alt="Green Life Logo" height="50" /> -->
 					</div>
 					<div class="col-sm">
 						<h6>post@greenlife.com</h6>

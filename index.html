@@ -7,6 +7,11 @@
 			src="https://kit.fontawesome.com/629d80b15b.js"
 			crossorigin="anonymous"
 		></script>
+		<link rel="preconnect" href="https://fonts.gstatic.com" />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Poiret+One&family=Roboto:wght@300;400&display=swap"
+			rel="stylesheet"
+		/>
 		<link href="css/style.css" rel="stylesheet" />
 		<title>Green Life | Buy green plants online</title>
 	</head>
@@ -30,11 +35,13 @@
 			<div class="bannerContainer">Loading ...</div>
 		</div>
 
-		<div class="container-lg">
-			<div class="featuredContainer">Loading ...</div>
+		<div class="container-lg mx-auto wrapper">
+			<div class="row gy-5 align-items-center featuredContainer">
+				Loading ...
+			</div>
 		</div>
 
-		<div class="container-fluid wrapper">
+		<div class="container-lg mx-auto wrapper">
 			<h2>Tips and tricks</h2>
 			<div class="row gy-5 row-cols-lg-3 align-items-center">
 				<div class="col">
@@ -46,7 +53,9 @@
 								Some tips and tricks to make your Monstera plant thrive and grow
 								big and beautiful.
 							</p>
-							<a href="#" class="btn btn-primary">Go to blog</a>
+							<a href="blog.html#monsteraTips" class="btn btn-primary"
+								>Go to blog</a
+							>
 						</div>
 					</div>
 				</div>
@@ -59,7 +68,9 @@
 								Which green plants are easy to handle and leaves your home
 								beatiful and fresh.
 							</p>
-							<a href="#" class="btn btn-primary">Go to blog</a>
+							<a href="blog.html#easyPlants" class="btn btn-primary"
+								>Go to blog</a
+							>
 						</div>
 					</div>
 				</div>
@@ -69,22 +80,23 @@
 						<div class="card-body">
 							<h5 class="card-title">Cutted leaves</h5>
 							<p class="card-text">
-								How to best preserve cutted green leaves that looks lovely on
+								How to decorate with cutted green leaves that looks lovely on
 								the dining table.
 							</p>
-							<a href="#" class="btn btn-primary">Go to blog</a>
+							<a href="blog.html#cuttedLeaves" class="btn btn-primary"
+								>Go to blog</a
+							>
 						</div>
 					</div>
 				</div>
 			</div>
 		</div>
 
-		<footer class="fixed-bottom">
+		<footer class="fixedFooter">
 			<div class="container-fluid">
 				<div class="row">
 					<div class="col-sm">
 						<h6>Green Life</h6>
-						<!-- <img src="images/logo.png" alt="Green Life Logo" height="50" /> -->
 					</div>
 					<div class="col-sm">
 						<h6>post@greenlife.com</h6>
@@ -97,5 +109,6 @@
 		</footer>
 
 		<script type="module" src="js/script.js"></script>
+		<script type="module" src="js/utils/renderFeaturedProducts.js"></script>
 	</body>
 </html>

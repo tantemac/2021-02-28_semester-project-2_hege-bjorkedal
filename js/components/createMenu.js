@@ -13,11 +13,17 @@ export default function createMenu() {
                     </li>`;
 
     if(username) {
-        authLink = `<li class="nav-item">
-                        <a class="nav-link ${pathname === "/admin.html" ? "active" : ""}" href="admin.html">Admin</a>
+        authLink = `<li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Admin
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="add.html">Add product</a></li>
+                            <li><a class="dropdown-item" href="products.html">Edit product</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <button class="logOutBtn btn btn-primary" id="logout">Logout</button>
+                        <button class="btn btn-outline-primary btn-sm" id="logout">Logout</button>
                     </li>`;
     }
 
@@ -43,10 +49,10 @@ export default function createMenu() {
                                     <li class="nav-item">
                                         <a class="nav-link ${pathname === "/products.html" ? "active" : ""}" href="products.html">Products</a>
                                     </li>
+                                    ${authLink}
                                     <li class="nav-item">
-                                        <a class="nav-link ${pathname === "/cart.html" ? "active" : ""}" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
-                                    </li>
-                                        ${authLink}
+                                        <a class="cartIcon nav-link ${pathname === "/cart.html" ? "active" : ""}" href="cart.html"><i class="fas fa-shopping-cart fa-lg"></i></a>
+                                    </li>    
                                 </ul>
                             </div>`;
 

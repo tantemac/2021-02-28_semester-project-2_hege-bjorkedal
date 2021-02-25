@@ -7,15 +7,23 @@ $primary: #3b7302 !important;
 $light: #f2f2f2;
 $dark: #012606;
 
+/* Fonts */
+$font-family-paragraph: "Roboto", sans-serif;
+$font-family-headings: "Poiret One", cursive;
+/* FONTS */
+// font-family: 'Poiret One', cursive;
+// font-family: 'Roboto', sans-serif;
+
+.cartIcon {
+	margin: 0px 20px 0px 20px;
+}
+
 footer {
 	background-color: $primary;
 	color: $light;
-	padding: 2em 0em 2em 0em;
+	padding: 1.3em 0em;
 	text-align: center;
-}
-
-.logOutBtn {
-	margin-left: 20px;
+	margin-top: 2em;
 }
 
 .adminBtn {
@@ -28,15 +36,23 @@ footer {
 	border: none;
 }
 
-// .breadcrumbsContainer {
-// 	margin-top: 20px;
-// 	margin-bottom: 10px;
-// }
+.breadcrumbsContainer {
+	margin: 2em 0 1em 2em;
+}
 
-// .breadcrumbsLink {
-// 	text-decoration: none;
-// 	color: $dark;
-// }
+.breadcrumbsLink {
+	text-decoration: none;
+	color: $dark;
+	font-size: 18px;
+}
+.breadcrumbsLink:hover {
+	color: $primary;
+}
+
+.blogTitle {
+	margin: 1em 0;
+	text-align: center;
+}
 
 .wrapper {
 	margin: 4em 0;

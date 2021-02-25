@@ -11296,15 +11296,18 @@ fieldset:disabled .btn {
   }
 }
 
+/* Fonts */
+/* FONTS */
+.cartIcon {
+  margin: 0px 20px 0px 20px;
+}
+
 footer {
   background-color: #3b7302 !important;
   color: #f2f2f2;
-  padding: 2em 0em 2em 0em;
+  padding: 1.3em 0em;
   text-align: center;
-}
-
-.logOutBtn {
-  margin-left: 20px;
+  margin-top: 2em;
 }
 
 .adminBtn {
@@ -11315,6 +11318,25 @@ footer {
   padding: 20px;
   border-radius: 5px;
   border: none;
+}
+
+.breadcrumbsContainer {
+  margin: 2em 0 1em 2em;
+}
+
+.breadcrumbsLink {
+  text-decoration: none;
+  color: #012606;
+  font-size: 18px;
+}
+
+.breadcrumbsLink:hover {
+  color: #3b7302 !important;
+}
+
+.blogTitle {
+  margin: 1em 0;
+  text-align: center;
 }
 
 .wrapper {
