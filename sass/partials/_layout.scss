@@ -20,16 +20,6 @@ body {
 	text-align: center;
 }
 
-.absoluteContainer {
-	position: absolute;
-	top: 100%;
-	left: 50%;
-	transform: translate(-50%, -100%);
-	background-color: rgba(129, 163, 108, 0.3);
-	padding: 20px;
-	width: 100%;
-}
-
 .paddingTop {
 	padding-top: 1em;
 }
@@ -64,6 +54,12 @@ body {
 	text-align: center;
 }
 
+.col-sm,
+.col {
+	display: flex;
+	justify-content: center;
+}
+
 /* FOOTER */
 
 footer {
@@ -73,4 +69,24 @@ footer {
 	text-align: center;
 	margin-top: 2em;
 	height: 120px;
+}
+
+@media screen and(min-width: 650px) {
+	.bannerText {
+		position: absolute;
+		top: 100%;
+		left: 50%;
+		transform: translate(-50%, -100%);
+		background-color: rgba(129, 163, 108, 0.3);
+		padding: 20px;
+		width: 100%;
+	}
+}
+
+@media screen and (max-width: 649px) {
+	.bannerText {
+		position: relative;
+		background-color: rgba(129, 163, 108, 0.6);
+		padding: 20px;
+	}
 }

@@ -28,7 +28,7 @@ function renderBanner(json) {
         if (banner) {
 
             bannerContainer.innerHTML += `<img src="${banner.heroBanner}" class="img-fluid">
-                                            <div class="absoluteContainer">
+                                            <div class="bannerText">
                                                 <h1>Make your home green</h1>
                                                 <a href="products.html"><button type="button" class="btn btn-outline-dark btn-lg">View plants</button></a>
                                             </div>`
