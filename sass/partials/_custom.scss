@@ -1,9 +1,9 @@
-$primary: #3b7302 !important;
-// $secondary: #ABD904;
-// $success: #ABD904;
+$primary: #81a36c !important;
+$secondary: #5e7d43;
+$success: #a2c993;
 // $info:
-// $warning:
-// $danger:
+$warning: #a36f5b;
+$danger: #cf273e;
 $light: #f2f2f2;
 $dark: #012606;
 
@@ -14,30 +14,42 @@ $font-family-headings: "Poiret One", cursive;
 // font-family: 'Poiret One', cursive;
 // font-family: 'Roboto', sans-serif;
 
+/* DROPDOWN MENU */
+
+.toggleClassDropdown {
+	display: none;
+}
+
+.toggleClassDropdown.open {
+	display: block;
+}
+
+.wrapper {
+	padding: 3em 0;
+}
+
 .cartIcon {
 	margin: 0px 20px 0px 20px;
 }
 
+.paddingTop {
+	padding-top: 1em;
+}
+
+.headerspaceBottom {
+	padding-bottom: 0.5em;
+}
+
 footer {
 	background-color: $primary;
-	color: $light;
+	color: $dark;
 	padding: 1.3em 0em;
 	text-align: center;
 	margin-top: 2em;
 }
 
-.adminBtn {
-	background-color: $dark;
-	color: $light;
-	width: 100px;
-	height: 100px;
-	padding: 20px;
-	border-radius: 5px;
-	border: none;
-}
-
 .breadcrumbsContainer {
-	margin: 2em 0 1em 2em;
+	padding: 1em 0 1em 1em;
 }
 
 .breadcrumbsLink {
@@ -45,8 +57,17 @@ footer {
 	color: $dark;
 	font-size: 18px;
 }
+
 .breadcrumbsLink:hover {
 	color: $primary;
+}
+
+/* CENTER ITEMS */
+
+.detailContainer,
+.adminContainer {
+	display: flex;
+	justify-content: center;
 }
 
 .blogTitle {
@@ -54,9 +75,25 @@ footer {
 	text-align: center;
 }
 
-.wrapper {
-	margin: 4em 0;
+/* ADMIN PAGE */
+
+.adminBtn {
+	background-color: $primary;
+	color: $dark;
+	width: 100px;
+	height: 100px;
+	padding: 20px;
+	border-radius: 5px;
+	border: none;
+	margin: 0 1em;
 }
+
+.adminBtn:hover {
+	color: $light;
+	background-color: $dark;
+}
+
+/* CART PAGE */
 
 .img-thumbnail {
 	width: 100px;
@@ -77,14 +114,19 @@ footer {
 	padding-top: 1em;
 }
 
+/* EDIT PAGE */
+
 .delete {
-	background-color: darkred;
-	border-color: darkred;
+	background-color: $danger;
+	border-color: $danger;
+	color: $light;
 }
 
 .delete:hover {
 	background-color: black;
 }
+
+/* PRODUCT PAGE */
 
 .searchContainer {
 	margin: 1em 0;
@@ -96,6 +138,8 @@ footer {
 	padding: 10px;
 }
 
+/* DISPLAY MESSAGE */
+
 .message {
 	width: 100%;
 	padding: 1rem;
@@ -104,19 +148,19 @@ footer {
 }
 
 .message.error {
-	border-color: red;
+	border-color: $danger;
 	color: white;
-	background: red;
+	background: $danger;
 }
 
 .message.warning {
-	border-color: orange;
+	border-color: $warning;
 	color: white;
-	background: orange;
+	background: $warning;
 }
 
 .message.success {
-	border-color: green;
-	color: white;
-	background: green;
+	border-color: $success;
+	color: $dark;
+	background: $success;
 }

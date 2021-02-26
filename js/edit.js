@@ -21,6 +21,7 @@ const name = document.querySelector("#name");
 const price = document.querySelector("#price");
 const description = document.querySelector("#description");
 const image = document.querySelector("#image");
+const featured = document.querySelector("#featured");
 const idInput = document.querySelector("#id");
 const message = document.querySelector(".messageContainer");
 
@@ -34,6 +35,10 @@ const message = document.querySelector(".messageContainer");
         description.value = details.description;
         image.value = details.image;
         idInput.value = details.id;
+
+        if(details.isFeatured) {
+            featured.checked = true;
+        }
 
         deleteButton(details.id);
 
@@ -56,20 +61,23 @@ function submitForm(event) {
     const priceValue = parseFloat(price.value);
     const descriptionValue = description.value.trim();
     const imageValue = image.value.trim();
+    const featuredValue = featured.checked;
     const idValue = idInput.value;
+    
 
     if(nameValue.length === 0 || priceValue.length === 0 || isNaN(priceValue) || descriptionValue.length === 0 || imageValue.length === 0) {
         return displayMessage("warning", "Please provide proper product details before editing product", ".messageContainer");
     }
 
-    updateProduct(nameValue,priceValue, descriptionValue, imageValue, idValue);
+
+    updateProduct(nameValue,priceValue, descriptionValue, imageValue, featuredValue, idValue);
 
 }
 
-async function updateProduct(name, price, description, image, id) {
+async function updateProduct(name, price, description, image, isFeatured, id) {
 
     const url = baseUrl + "plants/" + id;
-    const data = JSON.stringify({name: name, price: price, description: description, image: image });
+    const data = JSON.stringify({name: name, price: price, description: description, image: image, isFeatured});
     const token = getToken();
 
     const options = {

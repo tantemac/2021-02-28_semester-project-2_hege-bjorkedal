@@ -14,8 +14,7 @@ const totalPriceContainer = document.querySelector(".totalPriceContainer");
 
 if(cart.length === 0) {
     cartContainer.innerHTML = "You have not added any products to your cart yet.";
-    totalPriceContainer.innerHTML = " ";
-    cartTitlesContainer.innerHTML = " ";
+    totalPriceContainer.innerHTML = "";
 } 
 
 let totalPrice = 0;
@@ -42,20 +41,6 @@ cart.forEach((cartProduct) => {
 
 });
 
-cartTitlesContainer.innerHTML += `<div class="row row-cols-4 cartTitles">
-                                    <div class="col">
-                                    </div>
-                                    <div class="col">
-                                        <h6>Product</h6>
-                                    </div>
-                                    <div class="col">
-                                        <h6>Price</h6>
-                                    </div>
-                                    <div class="col">
-                                    </div>
-                                    </div>`
-
-
 totalPriceContainer.innerHTML += `<div class="row row-cols-4 cartTotal">
                                     <div class="col">
                                     </div>
@@ -68,7 +53,7 @@ totalPriceContainer.innerHTML += `<div class="row row-cols-4 cartTotal">
                                     <h6>$ ${totalPrice}</h6>
                                     </div>
                                     </div>`
-                                    
+
 
 const removeButton = document.querySelectorAll(".cartProduct i");
 

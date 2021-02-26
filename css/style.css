@@ -11298,30 +11298,41 @@ fieldset:disabled .btn {
 
 /* Fonts */
 /* FONTS */
+/* DROPDOWN MENU */
+.toggleClassDropdown {
+  display: none;
+}
+
+.toggleClassDropdown.open {
+  display: block;
+}
+
+.wrapper {
+  padding: 3em 0;
+}
+
 .cartIcon {
   margin: 0px 20px 0px 20px;
 }
 
+.paddingTop {
+  padding-top: 1em;
+}
+
+.headerspaceBottom {
+  padding-bottom: 0.5em;
+}
+
 footer {
-  background-color: #3b7302 !important;
-  color: #f2f2f2;
+  background-color: #81a36c !important;
+  color: #012606;
   padding: 1.3em 0em;
   text-align: center;
   margin-top: 2em;
 }
 
-.adminBtn {
-  background-color: #012606;
-  color: #f2f2f2;
-  width: 100px;
-  height: 100px;
-  padding: 20px;
-  border-radius: 5px;
-  border: none;
-}
-
 .breadcrumbsContainer {
-  margin: 2em 0 1em 2em;
+  padding: 1em 0 1em 1em;
 }
 
 .breadcrumbsLink {
@@ -11331,7 +11342,18 @@ footer {
 }
 
 .breadcrumbsLink:hover {
-  color: #3b7302 !important;
+  color: #81a36c !important;
+}
+
+/* CENTER ITEMS */
+.detailContainer,
+.adminContainer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 
 .blogTitle {
@@ -11339,10 +11361,24 @@ footer {
   text-align: center;
 }
 
-.wrapper {
-  margin: 4em 0;
+/* ADMIN PAGE */
+.adminBtn {
+  background-color: #81a36c !important;
+  color: #012606;
+  width: 100px;
+  height: 100px;
+  padding: 20px;
+  border-radius: 5px;
+  border: none;
+  margin: 0 1em;
 }
 
+.adminBtn:hover {
+  color: #f2f2f2;
+  background-color: #012606;
+}
+
+/* CART PAGE */
 .img-thumbnail {
   width: 100px;
 }
@@ -11362,15 +11398,18 @@ footer {
   padding-top: 1em;
 }
 
+/* EDIT PAGE */
 .delete {
-  background-color: darkred;
-  border-color: darkred;
+  background-color: #cf273e;
+  border-color: #cf273e;
+  color: #f2f2f2;
 }
 
 .delete:hover {
   background-color: black;
 }
 
+/* PRODUCT PAGE */
 .searchContainer {
   margin: 1em 0;
 }
@@ -11381,6 +11420,7 @@ footer {
   padding: 10px;
 }
 
+/* DISPLAY MESSAGE */
 .message {
   width: 100%;
   padding: 1rem;
@@ -11389,20 +11429,20 @@ footer {
 }
 
 .message.error {
-  border-color: red;
+  border-color: #cf273e;
   color: white;
-  background: red;
+  background: #cf273e;
 }
 
 .message.warning {
-  border-color: orange;
+  border-color: #a36f5b;
   color: white;
-  background: orange;
+  background: #a36f5b;
 }
 
 .message.success {
-  border-color: green;
-  color: white;
-  background: green;
+  border-color: #a2c993;
+  color: #012606;
+  background: #a2c993;
 }
 /*# sourceMappingURL=style.css.map */
