@@ -26,10 +26,13 @@ function renderBanner(json) {
     json.forEach(function (banner) {
 
         if (banner) {
-            // bannerContainer.innerHTML += `<div style="background-image: url(${image}); background-repeat: no-repeat; width: 100%; height: 100%;"></div>`
+
             bannerContainer.innerHTML += `<img src="${banner.heroBanner}" class="img-fluid">
-                                            <div>Make your home green</div>
-                                            <a href="products.html"><button type="button" class="btn btn-outline-dark btn-lg">View plants</button></a>`
+                                            <div class="absoluteContainer">
+                                                <h1>Make your home green</h1>
+                                                <a href="products.html"><button type="button" class="btn btn-outline-dark btn-lg">View plants</button></a>
+                                            </div>`
+
         } else {
             console.log(error);
             displayMessage("error", error, ".bannerContainer")

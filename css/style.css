@@ -11342,6 +11342,22 @@ body {
   padding: 0;
 }
 
+.bannerContainer {
+  position: relative;
+  text-align: center;
+}
+
+.absoluteContainer {
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  -webkit-transform: translate(-50%, -100%);
+          transform: translate(-50%, -100%);
+  background-color: rgba(129, 163, 108, 0.3);
+  padding: 20px;
+  width: 100%;
+}
+
 .paddingTop {
   padding-top: 1em;
 }
