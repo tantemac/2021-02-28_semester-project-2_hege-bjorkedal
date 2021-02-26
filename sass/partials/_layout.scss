@@ -1,0 +1,61 @@
+body {
+	padding-bottom: 140px;
+}
+
+.wrapper {
+	padding: 3em 0;
+}
+
+.menuIcon {
+	margin: 0px 10px 0px 10px;
+}
+
+.noMargins {
+	margin: 0;
+	padding: 0;
+}
+
+.paddingTop {
+	padding-top: 1em;
+}
+
+.headerspaceBottom {
+	padding-bottom: 0.5em;
+}
+
+.breadcrumbsContainer {
+	padding: 1em 0 1em 1em;
+}
+
+.breadcrumbsLink {
+	text-decoration: none;
+	color: $dark;
+	font-size: 18px;
+}
+
+.breadcrumbsLink:hover {
+	color: $primary;
+}
+
+/* CENTER ITEMS */
+
+.detailContainer {
+	display: flex;
+	justify-content: center;
+}
+
+.blogTitle {
+	margin: 1em 0;
+	text-align: center;
+}
+
+/* FOOTER */
+
+footer {
+	background-color: $primary;
+	color: $dark;
+	padding: 2em 0;
+	text-align: center;
+	margin-top: 2em;
+	height: 120px;
+}

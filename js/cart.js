@@ -7,7 +7,6 @@ createMenu();
 const cart = getExistingCart();
 console.log(cart);
 
-const cartTitlesContainer = document.querySelector(".cartTitlesContainer");
 const cartContainer = document.querySelector(".cartContainer");
 const totalPriceContainer = document.querySelector(".totalPriceContainer");
 

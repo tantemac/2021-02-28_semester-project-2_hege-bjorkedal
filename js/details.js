@@ -51,7 +51,13 @@ const productUrl = baseUrl + "plants/" + id;
 const addToCartButton = document.querySelectorAll(".addToCart");
 
 addToCartButton.forEach((button) => {
+
     button.addEventListener("click", addToCart);
+
+    // if(addToCartButton.click) {
+    //     displayMessage ("success", "The product is added to your cart", ".messageContainer");
+    // }
+
 });
 
 })();

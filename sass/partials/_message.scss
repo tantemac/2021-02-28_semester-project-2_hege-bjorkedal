@@ -1,0 +1,30 @@
+/* DISPLAY MESSAGE */
+
+.message {
+	width: 100%;
+	padding: 1rem;
+	border: 1px solid grey;
+	color: grey;
+}
+
+.message.error {
+	border-color: $danger;
+	border-radius: 5px;
+	color: white;
+	background: $danger;
+}
+
+.message.warning {
+	border-color: $warning;
+	border-radius: 5px;
+	color: white;
+	background: $warning;
+}
+
+.message.success {
+	color: $dark;
+	background: $light;
+	border-radius: 5px;
+	border: 3px solid $success;
+	margin: 1em 0em;
+}

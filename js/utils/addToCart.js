@@ -1,4 +1,5 @@
 import { getExistingCart } from "./getCart.js";
+import displayMessage from "../components/displayMessage.js";
 
 export default function addToCart() {
 
@@ -20,4 +21,5 @@ export default function addToCart() {
 function saveCart(cart) {
     localStorage.setItem("cartProducts", JSON.stringify(cart));
 
+    displayMessage ("success", "The product has been added to your cart", ".messageContainer");
 }

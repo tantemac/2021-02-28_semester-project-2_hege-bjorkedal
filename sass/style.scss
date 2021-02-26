@@ -1,3 +1,6 @@
+//Customs
+@import "./partials/custom";
+
 // Configuration
 @import "../bootstrap-scss/functions";
 @import "../bootstrap-scss/variables";
@@ -42,5 +45,11 @@
 @import "../bootstrap-scss/utilities/api";
 // scss-docs-end import-stack
 
-//Customs
-@import "./partials/custom";
+// Customs
+
+@import "./partials/cart";
+@import "./partials/edit";
+@import "./partials/layout";
+@import "./partials/typography";
+@import "./partials/products";
+@import "./partials/message";

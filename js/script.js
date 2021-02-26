@@ -22,7 +22,7 @@ async function callApi() {
 
         renderFeaturedProducts(results);
 
-        console.log(results);
+        // console.log(results);
     } catch (error) {
         console.log(error);
         displayMessage("error", error, ".featuredContainer");
@@ -36,13 +36,13 @@ function renderFeaturedProducts(results) {
     featuredContainer.innerHTML = "";
 
     if (results.isFeatured = true) { 
-        featuredTitle.innerHTML += `<h2 class="headerspaceBottom paddingTop">In season</h2>`
+        featuredTitle.innerHTML += `<h1 class="headerspaceBottom paddingTop">In season</h1>`
     }
 
     results.forEach(function (product) {
 
         let isFeatured = product.isFeatured;
-        console.log(isFeatured);
+        // console.log(isFeatured);
 
         if (isFeatured) {
             featuredContainer.innerHTML += `<div class="col-sm">
