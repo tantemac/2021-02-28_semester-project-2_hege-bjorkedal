@@ -42,7 +42,7 @@ const message = document.querySelector(".messageContainer");
 
         deleteButton(details.id);
 
-        console.log(details);
+        // console.log(details);
 
     } catch (error) {
         console.log(error);
