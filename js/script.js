@@ -6,8 +6,6 @@ import displayMessage from "./components/displayMessage.js";
 createMenu();
 initBanner();
 
-
-
 const plantUrl = baseUrl + "plants";
 const featuredContainer = document.querySelector(".featuredContainer");
 const featuredTitle = document.querySelector(".featuredTitle");

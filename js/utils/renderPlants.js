@@ -20,7 +20,8 @@ export function renderPlants(plantsToRender) {
                                             </div>
                                             <div class="card-body">
                                                 <div class="d-grid gap-2">
-                                                    <a href="edit.html?id=${plants.id}" class="btn btn-primary">Edit</a>
+                                                    <a href="details.html?id=${plants.id}"<button class="btn btn-primary showDetails" type="button">Details</button></a>
+                                                    <a href="edit.html?id=${plants.id}" class="btn btn-warning">Edit</a>
                                                 </div>
                                             </div>
                                         </div>

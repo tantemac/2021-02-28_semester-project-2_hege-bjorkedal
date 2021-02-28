@@ -42,7 +42,9 @@ a {
 .btn {
 	font-family: "Poiret One", cursive;
 }
-.btn-dark {
+.btn-dark,
+.btn-primary,
+.btn-warning {
 	color: $light;
 }
 

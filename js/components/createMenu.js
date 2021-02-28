@@ -23,7 +23,10 @@ export default function createMenu() {
                         <a class="nav-link ${pathname === "/products.html" ? "active" : ""}" aria-current="page" href="products.html">Edit product</a>
                     </li>
                     <li class="nav-item">
-                        <button class="btn btn-outline-primary btn-md menuIcon" id="logout">Logout</button>
+                        <a class="menuIcon nav-link ${pathname === "/cart.html" ? "active" : ""}" href="cart.html"><i class="fas fa-shopping-cart fa-1x"></i></a>
+                    </li>
+                    <li class="nav-item">
+                        <button class="btn btn-outline-primary menuIcon" id="logout">Logout</button>
                     </li>`;
     }
 
